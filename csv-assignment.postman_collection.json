@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "feeda73b-bba7-4d5b-9d10-65b98ca267f4",
+		"name": "csv-assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2417979"
+	},
+	"item": [
+		{
+			"name": "upload data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/csv/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"csv",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch all data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/csv/fetch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"csv",
+						"fetch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetch by code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/csv/fetch/271636001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"csv",
+						"fetch",
+						"271636001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/csv/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"csv",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
