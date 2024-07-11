@@ -39,7 +39,7 @@ public class CsvParser implements Parser {
                 }
             }
         } catch (IOException | CsvValidationException e) {
-            throw new RuntimeException(e);
+            throw new CsvErrorException(e.getMessage());
         }
         return entities;
     }
@@ -64,8 +64,7 @@ public class CsvParser implements Parser {
     private Instant convertToDate(String input) {
         try {
             return new SimpleDateFormat("dd-MM-YYYY").parse(input).toInstant();
-        } catch (ParseException e) {
-            //Ignore
+        } catch (ParseException ignore) {
             log.info("Invalid date format {}", input);
         }
         return null;
